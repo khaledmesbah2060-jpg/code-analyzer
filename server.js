@@ -6,6 +6,10 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Server is working 🔥");
+});
+
 app.use(cors());
 app.use(express.json());
 
